@@ -1,13 +1,12 @@
-import { useSelector, useDispatch } from "react-redux";
-
 //Redux
 import { isLoading } from "@/store/layouts/selectors";
 import { setIsLoading } from "@/store/layouts/actions";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 function Index() {
   //Redux
-  const loading = useSelector(isLoading);
-  const dispatch = useDispatch();
+  const loading = useAppSelector(isLoading);
+  const dispatch = useAppDispatch();
 
   function toggleLoading() {
     console.log(loading);
